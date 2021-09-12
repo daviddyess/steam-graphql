@@ -275,8 +275,6 @@ export const getPlayer = {
           steamids: [sid.getSteamID64()]
         });
 
-        log.info(JSON.stringify({ steam, stats }));
-
         return await { steam: steam?.response?.players[0], stats };
       }
     } catch (error) {
