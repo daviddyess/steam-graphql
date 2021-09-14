@@ -14,7 +14,8 @@ const { database, username, password, host, dialect } = config.mysql;
 
 const sequelize = new Sequelize(database, username, password, {
   host,
-  dialect
+  dialect,
+  logging: false
 });
 
 sequelize
