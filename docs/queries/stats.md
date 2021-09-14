@@ -38,6 +38,7 @@ query player($id: Int) {
       personaname
       profileurl
       avatar
+      avatarfull
       avatarmedium
       lastlogoff
       realname
