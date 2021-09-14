@@ -141,7 +141,6 @@ export const get = {
       if (tags.length > 0) {
         server.raw.tags = tags;
       }
-      log.info(JSON.stringify(server));
       return server;
     } catch (error) {
       log.error(error.message);
