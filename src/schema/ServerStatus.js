@@ -21,6 +21,7 @@ import {
   Int as ping,
   String as sm_nextmap,
   String as host,
+  String as port,
   String as type
 } from 'modules/graphQLTypes';
 import { getLogger } from 'modules/logging';
@@ -113,15 +114,17 @@ export const get = {
   type: ServerStatusDef,
   args: {
     host,
+    port,
     type
   },
-  resolve: async (_, { host, type }) => {
+  resolve: async (_, { host, port, type }) => {
     try {
       let server = {};
 
       await Gamedig.query({
         type,
         host,
+        port,
         requestRules: true
       })
         .then((state) => {
